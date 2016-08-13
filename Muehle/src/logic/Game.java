@@ -159,7 +159,7 @@ public class Game {
 				if (!mills[i].isActive() && !mills[0].hasTerminated()) {
 					try {
 						board.showCurrentBoard();
-						System.out.println("\nChoose Stone that shall be terminated: ");
+						System.out.print("\nChoose Stone that shall be terminated: ");
 						String move = input.readLine();
 						String[] stringArr = move.split(",");
 						int[] coordinates = new int[2];

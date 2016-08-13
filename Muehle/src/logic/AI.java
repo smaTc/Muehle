@@ -30,10 +30,14 @@ public class AI {
 	}
 	private void easyMove(Board board) {
 		//random stupid moves
+		//choose random fields 
+		
 	}
 	
 	private void mediumMove(Board board) {
 		//mills evaluation
+		//block enemy mills
+		//
 	}
 
 	private void hardMove(Board board) {
