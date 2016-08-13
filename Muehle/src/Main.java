@@ -11,7 +11,6 @@ public class Main {
 	public static void main(String[] args) {
 		startMusic();
 		menu();
-		
 		//testGame();
 	}
 
@@ -45,7 +44,7 @@ public class Main {
 		try{
 			music = new Sound("res/ickyThump.wav");
 		}catch (Exception e){
-			System.out.println("IDE start hopefully\n");
+			System.out.println("IDE start hopefully...\n");
 		}
 		if (music ==null){
 			try{
@@ -57,6 +56,7 @@ public class Main {
 		music.play();
 		music.loop();
 	}
+	
 	/*
 	public static void testGame(){
 		System.out.println("\n\n");
@@ -77,9 +77,6 @@ public class Main {
 		String input = System.console().readLine();
 		System.out.println(input);
 	}
-	
-	
-	
 	
 	public static void showArray(int[][] x) {
 		System.out.println("1.Dim:" + x.length + " | 2.Dim:" + x[0].length);
