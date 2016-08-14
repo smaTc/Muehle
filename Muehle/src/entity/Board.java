@@ -89,7 +89,7 @@ public class Board {
 	public Field getField(int y, int x) {
 		return this.gameBoard[y][x];
 	}
-	
+
 	public Mill[] getMills() {
 		return this.mills;
 	}
@@ -137,44 +137,36 @@ public class Board {
 		this.gameBoard[3][0].setField(3, Team.WHITE);// 5w
 		this.gameBoard[3][1].setField(4, Team.WHITE);// 6w
 		this.gameBoard[3][2].setField(3, Team.BLACK);// 5b
-		this.gameBoard[3][4].setField(3, Team.BLACK);// 6b
+		this.gameBoard[3][4].setField(3, Team.NOBODY);// 6b
 		this.gameBoard[3][5].setField(4, Team.WHITE);// 7w
 		this.gameBoard[3][6].setField(3, Team.WHITE);// 8w
 		// Reihe4(E)
 		this.gameBoard[4][2].setField(2, Team.NOBODY);
 		this.gameBoard[4][3].setField(3, Team.NOBODY);
-		this.gameBoard[4][4].setField(2, Team.NOBODY);
+		this.gameBoard[4][4].setField(2, Team.BLACK);
 		// Reihe5(F)
-		this.gameBoard[5][1].setField(2, Team.NOBODY);
-		this.gameBoard[5][3].setField(4, Team.BLACK);// 7b
+		this.gameBoard[5][1].setField(2, Team.BLACK);
+		this.gameBoard[5][3].setField(4, Team.WHITE);// 7b
 		this.gameBoard[5][5].setField(2, Team.NOBODY);
 		// Reihe6(G)
 		this.gameBoard[6][0].setField(2, Team.WHITE);// 9w
 		this.gameBoard[6][3].setField(3, Team.BLACK);// 8b
 		this.gameBoard[6][6].setField(2, Team.BLACK);// 9b
 	}
-	
+
 	/*
-	 
- 	public void showBoardFieldValues() {
-		System.out.println("1Dim:" + gameBoard.length + " 2Dim:" + gameBoard[0].length);
-		for (int i = 0; i < gameBoard.length; i++) {
-			for (int j = 0; j < gameBoard[i].length; j++) {
-				System.out.print(gameBoard[i][j].getFieldValue() + " ");
-			}
-			System.out.println();
-		}
-	}
- 	
-	public void showBoardFieldTeams() {
-		// System.out.println("1Dim:" + gameBoard.length + " 2Dim:" +
-		// gameBoard[0].length);
-		for (int i = 0; i < gameBoard.length; i++) {
-			for (int j = 0; j < gameBoard[i].length; j++) {
-				System.out.print(gameBoard[i][j].getTeamShort() + " ");
-			}
-			System.out.println();
-		}
-	}*/
-	
+	 * 
+	 * public void showBoardFieldValues() { System.out.println("1Dim:" +
+	 * gameBoard.length + " 2Dim:" + gameBoard[0].length); for (int i = 0; i <
+	 * gameBoard.length; i++) { for (int j = 0; j < gameBoard[i].length; j++) {
+	 * System.out.print(gameBoard[i][j].getFieldValue() + " "); }
+	 * System.out.println(); } }
+	 * 
+	 * public void showBoardFieldTeams() { // System.out.println("1Dim:" +
+	 * gameBoard.length + " 2Dim:" + // gameBoard[0].length); for (int i = 0; i
+	 * < gameBoard.length; i++) { for (int j = 0; j < gameBoard[i].length; j++)
+	 * { System.out.print(gameBoard[i][j].getTeamShort() + " "); }
+	 * System.out.println(); } }
+	 */
+
 }

@@ -9,7 +9,7 @@ import logic.Sound;
 public class Main {
 
 	public static void main(String[] args) {
-		startMusic();
+		//startMusic();
 		menu();
 		//testGame();
 	}

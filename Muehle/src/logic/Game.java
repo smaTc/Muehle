@@ -76,6 +76,7 @@ public class Game {
 				this.activeGame = false;
 			}
 		}
+		checkMills();
 		nextPlayer();
 	}
 
@@ -85,7 +86,6 @@ public class Game {
 		try {
 			move = input.readLine();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		String[] stringArr = move.split(",");
@@ -99,7 +99,7 @@ public class Game {
 			System.out.println("Nice try, asshole...next try");
 			makeMove();
 		}
-		if (this.move.movePossible(board.getField(coordinates[3], coordinates[2]),
+		if (this.move.movePossible(currentPlayer.getStonesOnField(),board.getField(coordinates[3], coordinates[2]),
 				board.getValueOfPosition(coordinates[1], coordinates[0]),
 				board.getValueOfPosition(coordinates[3], coordinates[2]))
 				&& board.getFieldTeam(coordinates[1], coordinates[0]) == currentPlayer.getTeamEnum()) {
@@ -109,7 +109,7 @@ public class Game {
 			System.out.println("Please type coordiantes for a valid move");
 			makeMove();
 		}
-		checkMills();
+
 	}
 
 	public void setStones() {
@@ -156,7 +156,7 @@ public class Game {
 			if (fields[0].getFieldTeam() == currentPlayer.getTeamEnum()
 					&& fields[1].getFieldTeam() == currentPlayer.getTeamEnum()
 					&& fields[2].getFieldTeam() == currentPlayer.getTeamEnum()) {
-				if (!mills[i].isActive() && !mills[0].hasTerminated()) {
+				if (!mills[i].isActive() && !mills[i].hasTerminated()) {
 					try {
 						board.showCurrentBoard();
 						System.out.print("\nChoose Stone that shall be terminated: ");
@@ -180,6 +180,15 @@ public class Game {
 						e1.printStackTrace();
 					}
 				}
+			} else /*
+					 * if (!(fields[0].getFieldTeam() ==
+					 * currentPlayer.getTeamEnum() && fields[1].getFieldTeam()
+					 * == currentPlayer.getTeamEnum() &&
+					 * fields[2].getFieldTeam() == currentPlayer.getTeamEnum())
+					 * && mills[i].isActive())
+					 */ {
+				mills[i].setInactive();
+
 			}
 		}
 	}

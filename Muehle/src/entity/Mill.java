@@ -29,6 +29,11 @@ public class Mill {
 	public void setActive() {
 		this.active = true;
 	}
+	
+	public void setInactive(){
+		this.active=false;
+		this.hasTerminatedStone = false;
+	}
 
 	public void setTeam(Team team) {
 		this.team = team;

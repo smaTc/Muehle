@@ -28,9 +28,16 @@ public class Move {
 		else return false;
 	}
 	
-	public boolean movePossible(Field field,int current, int next){
-		if(allowedMove(current, next)&&fieldIsFree(field))return true;
-		else return false;
+	public boolean movePossible(int stonesOnField,Field field,int current, int next){
+		if(stonesOnField>3){
+			if(allowedMove(current, next)&&fieldIsFree(field))return true;
+			else return false;
+		}
+		else{
+			if(fieldIsFree(field))return true;
+			else return false;
+		}
+		
 	}
 	
 	
